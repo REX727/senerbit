@@ -1,0 +1,26 @@
+smarthome.crashSensorSetup(DigitalPin.P1)
+let strip = neopixel.create(DigitalPin.P2, 1, NeoPixelMode.RGB)
+basic.forever(function () {
+    if (smarthome.crashSensor()) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+    } else {
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+        basic.pause(100)
+        strip.showColor(neopixel.colors(NeoPixelColors.White))
+    }
+})
